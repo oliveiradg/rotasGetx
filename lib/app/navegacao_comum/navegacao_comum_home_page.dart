@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:rotas_getx/app/navegacao_comum/back/back_home_page.dart';
 import 'package:rotas_getx/app/navegacao_comum/to/to_home_page.dart';
 
 class NavegacaoComumHomePage extends StatelessWidget {
@@ -20,6 +21,18 @@ class NavegacaoComumHomePage extends StatelessWidget {
               Get.to(const ToHomePage());
             },
             child: const Text('TO (Push)'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Get.to(const ToHomePage());
+            },
+            child: const Text('TO (Push)'),
+          ),
+          ElevatedButton(
+            onPressed: () {
+              Get.to(const ());
+            },
+            child: const Text('Back (Pop)'),
           ),
         ],
       )),
