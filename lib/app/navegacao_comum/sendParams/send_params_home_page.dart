@@ -1,17 +1,31 @@
 import 'package:flutter/material.dart';
-    
-class SendParamsHomePage extends StatelessWidget {
+import 'package:get/get.dart';
 
-  const SendParamsHomePage({ Key? key }) : super(key: key);
-  
+class SendParamsHomePage extends StatelessWidget {
+  const SendParamsHomePage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
+    final paramNative =
+        ModalRoute.of(context)?.settings.arguments ?? 'param não enviado';
+
+    final paramGetx = Get.arguments ?? 'param não enviado';
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Enviando Parâmetros
-        '),
+        title: const Text('Enviando Parâmetros'),
       ),
-      body: Container(),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text(
+              'Nativo: $paramNative',
+            ),
+            Text('Get: $paramGetx '),
+          ],
+        ),
+      ),
     );
   }
 }
